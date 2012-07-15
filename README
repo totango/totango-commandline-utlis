@@ -1,4 +1,4 @@
-h1. Totango Command Line Utilities 
+*Totango Command Line Utilities*
 
 The Totango command line utilities are a set of scripts designed for simple access to Totango Data from the command-line. You can use it to export data from
 your Totango account without learning the intricacies of the Totango API. Simply run the relevant script and grab the results from stdout.
@@ -8,15 +8,14 @@ For more about the Totango Data API: dev.totango.com
 
 Right now the toolchest is pretty minimal, so feel free to fork and add more tools to the mix.
 
-h2. General
+*General*
 General command-line arguments:
 - apikey <API-TOKEN> see: https://app.totango.com/app.html#!/updateProfile?tab=Profile on how to find your token
 
 output goes to stdout, with errors or progress printouts to stderr, so it's usually safe to redirect sdtout to a .csv file.
 
-h2. Command Tools
 
-h3 accountsRecentActivity.php 
+*accountsRecentActivity.php*
 Print the number of times each account in an active-list performed a set of actions in the last 7, 30 and 90 days
 *Example*: 
 > php accountsRecentActivity.php -apikey YOUR-API-KEY -activelistID 1004 -activity Login -activity "Add Task" 
@@ -26,7 +25,7 @@ account-id, account-name, first-activity, last-activity, Login_7d, Login_30d, Lo
 4522, account-B, 01/01/12 00:10, 01/15/12 3:44, 10,0,0, 
 
 
-h3 accountsEngagement.php 
+*accountsEngagement.php*
 Print the engagement score of each account in an active-list 
 *Example*: 
 > php totangoActivities.php -apikey YOUR-API-KEY -activelistID 1004  
